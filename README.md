@@ -315,7 +315,7 @@ Tester :
 
 #### Avance rapide
 
-Dans une branche `beans`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
+Dans une branche `beans`, renommer toutes les variables "employe" en "employe". Valider cette modification.
 
 ```bash
 git checkout -b beans
@@ -353,15 +353,15 @@ find src/main/java -type f -exec sed -i "s/\t/  /g" {} \;
 git commit -am "Remplacement des tabulations par des espaces"
 ```
 
-Dans la branche `master`, renommer toutes les variables "salarie" en "employe". Valider cette modification.
+Dans la branche `master`, renommer toutes les variables "employe" en "employe". Valider cette modification.
 
 :information_source: Cette action représente un *refactoring* assez important.
 
 ```bash
 git checkout master
-find src/main/java -type f -exec sed -i -e "s/salarie/employe/g" {} \;
+find src/main/java -type f -exec sed -i -e "s/employe/employe/g" {} \;
 git add .
-git commit -am "Renommage des variables 'salarie' -> 'employe'"
+git commit -am "Renommage des variables 'employe' -> 'employe'"
 ```
 
 Fusionner la branche `spaces` dans `master`. Constater la présence de nombreux conflits dus à la modification de chaque tabulation. Interrompre la fusion.
